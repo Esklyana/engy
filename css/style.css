@@ -52,6 +52,11 @@ h2 {
 
 a {
 	text-decoration: none;
+	cursor: pointer;
+}
+
+a:focus {
+	outline: none;
 }
 
 p {
@@ -146,6 +151,184 @@ p {
 	color: #421095;
 	border: 1px solid #421095;
 	padding: 12px 30px;
+}
+
+.slick-slider
+{
+    position: relative;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    min-height: 1px;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 16px;
+    height: 30px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.slick-prev {
+    left: -40px;
+    z-index: 21;
+    background: url('../img/prev.svg') no-repeat center left;
+}
+
+.slick-next {
+    right: -40px;
+    background: url('../img/next.svg') no-repeat center right;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -64px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    background: #F0ECF7;
+    border-radius: 100%;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 11px;
+    height: 11px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li.slick-active {
+    width: 11px;
+	height: 11px;
+	background: #421095;
+	border: 0;
+}
+
+.slick-slide>div, .slick-slide {
+	width: 460px !important;
+	margin: auto 16px auto 16px;
+	height: 503px !important;
 }
 
 .device {
@@ -271,6 +454,10 @@ p {
 .iphone1 {
 	background: url("../img/iphone1.png") no-repeat center center;
 	margin-left: 120px;
+}
+
+.iphone1-tel {
+	display: none;
 }
 
 .iphone2 {
@@ -472,39 +659,27 @@ p {
 }
 
 .news__width {
-	max-width: 990px;
+	width: 990px !important;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
 }
 
-.news__arrow {
-	background-size: contain !important;
-	width: 16px;
-	height: 30px;
-	margin: auto 5px;
-}
-
-.arrow_left {
-	background: url("../img/left_arrow.svg") no-repeat center center;
-}
-
-.arrow_right {
-	background: url("../img/right_arrow.svg") no-repeat center center;
-}
-
 .news__box {
-	width: 449px;
+	display: block;
+	width: 449px !important;
+	height: 464px !important;
 	border-radius: 10px;
-	margin: auto 10px;
+	margin: auto 0 !important;
 }
+
 
 .news__background {
 	background: url("../img/news__background.png") no-repeat center center;
 	background-size: cover;
-	width: 100%;
-	height: 173px;
+	width: 449px !important;
+	height: 173px !important;
 	display: flex;
 	align-items: flex-end;
 	padding-left: 25px;
@@ -524,7 +699,7 @@ p {
 
 .news__shadow {
 	padding: 21px 32px 35px 32px;
-	box-shadow: 0px 10px 30px rgba(66, 16, 149, 0.14);
+	box-shadow: 0px 10px 7px rgba(66, 16, 149, 0.14);
 	border-radius: 0 0 10px 10px;
 }
 
@@ -544,10 +719,17 @@ p {
 }
 
 .news__text {
+	display: block;
+	max-height: 80px;
+	overflow: hidden;
 	font-size: 14px;
 	line-height: 20px;
 	color: #000;
 	margin-bottom: 18px;
+}
+
+.news__details {
+	display: none;
 }
 
 .whom__block {
@@ -569,30 +751,9 @@ p {
     font-size: 14px;
     line-height: 18px;
     text-align: center;
-    margin: 41px auto 120px auto;
+    margin: 90px auto 120px auto;
 }
 
-.news__dots {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 64px;
-	margin: 46px auto 41px auto;
-}
-
-.news__dot {
-	width: 10px;
-	height: 10px;
-	border-radius: 100%;
-}
-
-.purple-dot {
-	background: #421095;
-}
-
-.gray-dot {
-	background: #F0ECF7;
-}
 
 .background__purple {
 	background: #421095;
@@ -719,10 +880,12 @@ p {
 		align-items: flex-end;
 		background-color: #fff;
 		padding: 21px;
+		width: 100%;
 	}
 
 	.menu a {
-		margin: 0 5px 5px 0;
+		margin: 5px 10px 25px 0;
+		font-size: 25px;
 	}
 
 	.menu__tel {
@@ -844,8 +1007,8 @@ p {
 	}
 
 	.iphone1-tel {
-	background: url("../img/iphone1.png") no-repeat center center;
-	margin-top: 50px;
+		background: url("../img/iphone1.png") no-repeat center center;
+		margin-top: 50px;
 	}
 
 	.iphone2 {
@@ -945,10 +1108,27 @@ p {
 
 	.news__width {
 		justify-content: center;
+		width: 100% !important;
 	}
 
 	.news__box {
-		width: 100%;
+		width: calc(100vw - 30px) !important;
+		height: auto !important;
+		min-height: 525px !important;
+		margin: 0;
+	}
+
+	.slick-slide>div, .slick-slide {
+		width: calc(100vw - 30px) !important;
+		height: auto !important;
+		min-height: 525px !important;
+		margin: 0;
+	}
+
+	.news__background {
+		width: 100% !important;
+		height: 220px !important;
+		padding: 20px;
 	}
 
 	.news__dot {
@@ -962,7 +1142,7 @@ p {
 
 	.size1 {
 		width: 163px;
-		margin: 41px auto 80px auto;
+		margin: 115px auto 80px auto;
 	}
 
 	.subscription {
@@ -1019,5 +1199,38 @@ p {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.news__under {
+		margin: 0 0 0 10px;
+		line-height: 20px;
+	}
+
+	.news__shadow {
+		height: 290px !important;
+		width: calc(100vw - 30px) !important;
+		box-shadow: 0px 5px 1px rgba(66, 16, 149, 0.14);
+	}
+
+	.news__shadow>div {
+		max-height: 215px;
+		overflow: hidden;
+	}
+
+	.whom__block {
+		display: none;
+	}
+
+	.news__text {
+		max-height: 120px;
+		margin-bottom: 5px;
+	}
+
+	.news__details {
+	display: inline;
+	font-size: 14px;
+	line-height: 18px;
+	color: #421095;
+	border-bottom: 1px solid #421095;
 	}
 }

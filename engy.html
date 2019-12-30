@@ -5,6 +5,10 @@
 	<title>ENGY</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/x-icon" href="./img/favicon.png">
+	<script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="./js/slick.js"></script>
+	<script type="text/javascript" src="./js/jquery.singlePageNav.min.js"></script>
 	<script src="./js/script.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
 </head>
@@ -25,7 +29,7 @@
 				<a href="" class="basket">
 					<img src="./img/basket.svg" class="basket__img">
 				</a>
-				<a href="" class="burger"></a>
+				<a class="burger"></a>
 			</div>
 		</header>
 		<div class="control">
@@ -215,62 +219,106 @@
 		</div>
 		<h2 class="news__title">Новости блога</h2>
 		<div class="news__width">
-			<div class="news__arrow arrow_left browser"></div>
-			<div class="news__box">
+			<a href="" class="news__box">
 				<div class="news__background">
-					<a href="" class="news__under">Кардио-новости</a>
-					<a href="" class="news__under">Рекомендации врачей</a>
+					<span class="news__under">Кардио-новости</span>
+					<span class="news__under">Рекомендации врачей</span>
 				</div>
 				<div class="news__shadow">
 					<p class="news__date">21 января 2019</p>
 					<p class="news__line">Новости современной кардиологии</p>
 					<p class="news__text">Узнайте, что предложили американские кардиологи по результатам комплексных исследований  от 20 декабря 2018 г. Согласно статистике опубликованной в журнал Кардиолог, существует несколько возможных причин порока сердца у людей старше...</p>
 					<div class="whom__block">
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
 					</div>
+					<span class="news__details">Подробнее</span>
 				</div>
-			</div>
-			<div class="news__box browser">
+			</a>
+			<a href="" class="news__box">
 				<div class="news__background">
-					<a href="" class="news__under">Кардио-новости</a>
-					<a href="" class="news__under">Рекомендации врачей</a>
+					<span class="news__under">Кардио-новости</span>
+					<span class="news__under">Рекомендации врачей</span>
 				</div>
 				<div class="news__shadow">
 					<p class="news__date">21 января 2019</p>
 					<p class="news__line">Новости современной кардиологии</p>
 					<p class="news__text">Узнайте, что предложили американские кардиологи по результатам комплексных исследований  от 20 декабря 2018 г. Согласно статистике опубликованной в журнал Кардиолог, существует несколько возможных причин порока сердца у людей старше...</p>
 					<div class="whom__block">
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
-						<a href="" class="news__whom">Всем</a>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
 					</div>
+					<span class="news__details">Подробнее</span>
 				</div>
-			</div>
-			<div class="news__arrow arrow_right browser"></div>
-		</div>
-		<div class="news__dots">
-			<a href="" class="news__dot purple-dot"></a>
-			<a href="" class="news__dot gray-dot"></a>
-			<a href="" class="news__dot gray-dot"></a>
-			<a href="" class="news__dot gray-dot"></a>
+			</a>
+			<a href="" class="news__box">
+				<div class="news__background">
+					<span class="news__under">Кардио-новости</span>
+					<span class="news__under">Рекомендации врачей</span>
+				</div>
+				<div class="news__shadow">
+					<p class="news__date">21 января 2019</p>
+					<p class="news__line">Новости современной кардиологии</p>
+					<p class="news__text">Узнайте, что предложили американские кардиологи по результатам комплексных исследований  от 20 декабря 2018 г. Согласно статистике опубликованной в журнал Кардиолог, существует несколько возможных причин порока сердца у людей старше...</p>
+					<div class="whom__block">
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+					</div>
+					<span class="news__details">Подробнее</span>
+				</div>
+			</a>
+			<a href="" class="news__box">
+				<div class="news__background">
+					<span class="news__under">Кардио-новости</span>
+					<span class="news__under">Рекомендации врачей</span>
+				</div>
+				<div class="news__shadow">
+					<p class="news__date">21 января 2019</p>
+					<p class="news__line">Новости современной кардиологии</p>
+					<p class="news__text">Узнайте, что предложили американские кардиологи по результатам комплексных исследований  от 20 декабря 2018 г. Согласно статистике опубликованной в журнал Кардиолог, существует несколько возможных причин порока сердца у людей старше...</p>
+					<div class="whom__block">
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+						<span class="news__whom">Всем</span>
+					</div>
+					<span class="news__details">Подробнее</span>
+				</div>
+			</a>
 		</div>
 		<a href="" class="size1 platform">Все статьи</a>
 	</div>
